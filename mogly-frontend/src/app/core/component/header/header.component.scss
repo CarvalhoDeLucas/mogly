@@ -6,7 +6,11 @@
         background: #000;
         color: #FFF;
 
-        .name__mogly {
+        #menu {
+            position: absolute;
+        }
+
+        #name__mogly {
             display: flex;
             align-items: center;
             justify-content: center;
