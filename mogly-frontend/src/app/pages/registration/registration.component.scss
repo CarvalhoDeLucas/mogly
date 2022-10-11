@@ -1,0 +1,16 @@
+:host {
+    .container {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &__title {
+            padding: 50px 0;
+
+            .title {
+                font-size: 22px;
+            }            
+        }
+    }
+}

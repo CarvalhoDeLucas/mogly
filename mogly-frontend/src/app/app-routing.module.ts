@@ -7,11 +7,11 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: RegistrationComponent
   },
   {
     path: 'registration',
-    component: RegistrationComponent
+    component: HomeComponent
   },
   {
     path: 'login',

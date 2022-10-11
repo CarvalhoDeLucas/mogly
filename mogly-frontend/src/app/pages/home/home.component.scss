@@ -5,6 +5,8 @@
         justify-content: center;
         align-items: center;
 
+        position: relative;
+
         &__main__title {
             height: 50px;
             width: 100%;
@@ -24,6 +26,12 @@
             width: 70%;
             text-align: justify;
             font-size: 18px;
+
+            padding-bottom: 50px;
+
+            p {
+                padding: 15px 0;
+            }
         }
     }
 }
