@@ -1,0 +1,39 @@
+:host {
+    footer {
+        width: 100%;
+        color: #FFF;
+        background-color: #000;
+
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        font-size: 12px;
+
+        .info {
+            height: 175px;
+
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+            justify-content: center;
+
+            &__nome {
+                padding: 3px;
+            }
+
+            &__logo {
+                padding: 10px 0;
+
+                a {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}

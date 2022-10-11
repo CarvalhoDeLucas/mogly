@@ -1,0 +1,29 @@
+:host {
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__main__title {
+            height: 50px;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 40px 0;
+
+            .title {
+                font-size: 25px;
+            }
+        }
+
+        &__text {
+            width: 70%;
+            text-align: justify;
+            font-size: 18px;
+        }
+    }
+}

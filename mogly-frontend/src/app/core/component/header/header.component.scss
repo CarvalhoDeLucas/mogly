@@ -10,11 +10,14 @@
 
       align-items: center;
       padding: 0 15px;
-      
+
       display: flex;
+
+      justify-content: space-between;
 
       .info {
         flex-direction: row;
+        justify-content: space-between;
 
         &__menu {
           cursor: pointer;
@@ -23,10 +26,6 @@
         }
 
         &__mogly {
-          position: relative;
-
-          margin: 0 auto;
-
           font-size: 25px;
           cursor: pointer;
         }
@@ -44,6 +43,7 @@
 
           background: rgb(102, 102, 102);
         }
+
       }
     }
 
