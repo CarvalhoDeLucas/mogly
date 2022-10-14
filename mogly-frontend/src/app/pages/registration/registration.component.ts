@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  public list: Array<{ name: string, email: string, birthDate: string }> = [
+    {
+      name: 'Lucas',
+      email: 'lucas@gmail.com',
+      birthDate: '14/01/2001'
+    }
+  ];
+
   constructor(
   ) { }
 
