@@ -1,10 +1,12 @@
 <header>
-    <div class="header__top">
-        <p class="info__menu">☰ MENU</p>
-        <h1 class="info__mogly">MOGLY</h1>
-        <input type="text" name="search" class="info__search">
-    </div>
-    <div class="header__img">
-        <img src="assets/img/background-img.png" alt="Imagem de uma floresta">
-    </div>
+  <div class="header__top">
+    <p class="info__menu">☰ MENU</p>
+    <a [routerLink]="['']" class="info__mogly">
+      <h1>MOGLY</h1>
+    </a>
+    <input type="text" name="search" class="info__search">
+  </div>
+  <div class="header__img">
+    <img src="assets/img/background-img.png" alt="Imagem de uma floresta">
+  </div>
 </header>

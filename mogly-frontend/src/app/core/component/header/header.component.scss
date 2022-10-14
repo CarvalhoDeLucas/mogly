@@ -17,7 +17,7 @@
 
       .info {
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         &__menu {
           cursor: pointer;
@@ -26,7 +26,15 @@
         }
 
         &__mogly {
-          font-size: 25px;
+          display: flex;
+          justify-content: center;
+          
+          margin: 0 auto;
+
+          text-decoration: none;
+          color: #FFF;
+
+          font-size: 15px;
           cursor: pointer;
         }
 
@@ -37,10 +45,16 @@
         &__search {
           width: 200px;
           height: 25px;
+          padding: 0 10px;
+
+          position: absolute;
+          right: 1%;
 
           border: none;
           border-radius: 12.5px;
 
+          font-size: 15px;
+          color: #FFF;
           background: rgb(102, 102, 102);
         }
 
