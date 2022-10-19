@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -14,10 +14,19 @@ export class RegistrationComponent implements OnInit {
     name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
     date: ['', [Validators.required]],
-    cell: ['' , Validators.required],
-    cpf: ['' , Validators.required],
-    rg: ['' , Validators.required],
-  })
+    cell: ['', Validators.required],
+    cpf: ['', Validators.required],
+    rg: ['', Validators.required],
+  });
+
+  public profileForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    date: new FormControl(''),
+    cell: new FormControl(''),
+    cpf: new FormControl(''),
+    rg: new FormControl(''),
+  });
 
   public list: Array<{ name: string, email: string, birthDate: string }> = [
     {
@@ -35,10 +44,8 @@ export class RegistrationComponent implements OnInit {
   }
 
   public submitForm() {
-    if (this.formAuth.valid) {
-      this.msgError = 'Cadastrado';
-    } else {
-      this.msgError = 'Erro';
+    if (!this.formAuth.valid) {
+      this.msgError = 'Preencha todos os campos corretamente!';
     }
   }
 

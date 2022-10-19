@@ -1,73 +1,74 @@
 <app-header></app-header>
 <main>
-    <section class="container">
-        <section class="container__title">
-            <h1 class="title">Bem-Vindo a Reserva Mogly! Preencha os campos abaixo para se cadastrar.</h1>
-        </section>
-        <section class="container__form">
-            <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
-                <section class="form__info">
-                    <section class="description">
-                        <label>Nome Completo: <strong class="mandatory">*</strong></label>
-                        <input type="text" formControlName="name" name="name" id="name" class="text__form" required>
-                    </section>
-                    <section class="description">
-                        <label>E-mail: <strong class="mandatory">*</strong></label>
-                        <input type="email" formControlName="email" name="email" id="email" class="text__form" required>
-                    </section>
-                    <section class="description">
-                        <label>Data Nascimento: <strong class="mandatory">*</strong></label>
-                        <input type="date" formControlName="date" name="date" id="date" class="text__form" required>
-                    </section>
-                </section>
-                <section class="form__info">
-                    <section class="description">
-                        <label>Celular: <strong class="mandatory">*</strong></label>
-                        <input type="text" formControlName="cell" name="cell" id="cell" class="text__form" required>
-                    </section>
-                    <section class="description">
-                        <label>CPF: <strong class="mandatory">*</strong></label>
-                        <input type="number" formControlName="cpf" name="cpf" id="cpf" class="text__form" required>
-                    </section>
-                    <section class="description">
-                        <label>RG: <strong class="mandatory">*</strong></label>
-                        <input type="number" formControlName="rg" name="rg" id="rg" class="text__form" required>
-                    </section>
-                    <section class="description">
-                        <label>Observação:</label>
-                        <input type="text" name="note" id="note" class="text__form">
-                    </section>
-                </section>
-                <section class="form__info">
-                    <section class="description">
-                        <input type="button" value="Cadastrar" class="button register">
-                    </section>
-                    <section class="description">
-                        <input type="button" value="Cancelar" class="button cancel">
-                    </section>
-                </section>
-            </form>
-        </section>
-        <section class="table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome Completo</th>
-                        <th>E-mail</th>
-                        <th>Data Cadastro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of list">
-                        <td>{{ item.name }}</td>
-                        <td>{{ item.email }}</td>
-                        <td>{{ item.birthDate }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <span class="msg-error" *ngIf="msgError">{{ msgError }}</span>
+  <section class="container">
+    <section class="container__title">
+      <h1 class="title">Bem-Vindo a Reserva Mogly! Preencha os campos abaixo para se cadastrar.</h1>
     </section>
+    <section class="container__form">
+      <form [formGroup]="formAuth">
+        <section class="form__info">
+          <section class="description">
+            <label>Nome Completo: <strong class="mandatory">*</strong></label>
+            <input type="text" formControlName="name" name="name" id="name" class="text__form" required>
+          </section>
+          <section class="description">
+            <label>E-mail: <strong class="mandatory">*</strong></label>
+            <input type="email" formControlName="email" name="email" id="email" class="text__form" required>
+          </section>
+          <section class="description">
+            <label>Data Nascimento: <strong class="mandatory">*</strong></label>
+            <input type="date" formControlName="date" name="date" id="date" class="text__form" required>
+          </section>
+        </section>
+        <section class="form__info">
+          <section class="description">
+            <label>Celular: <strong class="mandatory">*</strong></label>
+            <input type="text" formControlName="cell" name="cell" id="cell" class="text__form" required>
+          </section>
+          <section class="description">
+            <label>CPF: <strong class="mandatory">*</strong></label>
+            <input type="number" formControlName="cpf" name="cpf" id="cpf" class="text__form" required>
+          </section>
+          <section class="description">
+            <label>RG: <strong class="mandatory">*</strong></label>
+            <input type="number" formControlName="rg" name="rg" id="rg" class="text__form" required>
+          </section>
+          <section class="description">
+            <label>Observação:</label>
+            <input type="text" name="note" id="note" class="text__form">
+          </section>
+        </section>
+        <section class="form__info">
+          <section class="description">
+            <button (click)="submitForm()" class="button register">Cadastrar</button>
+          </section>
+          <section class="description">
+            <button type="reset" class="button clean">Limpar</button>
+          </section>
+        </section>
+      </form>
+    </section>
+    <section class="container__error">
+      <span class="msg-error" *ngIf="msgError">{{ msgError }}</span>
+    </section>
+    <section class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>E-mail</th>
+            <th>Data Cadastro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of list">
+            <td>{{ item.name }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.birthDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
 </main>
 <app-footer></app-footer>

@@ -104,15 +104,27 @@
             background-color: #0d7503;
           }
 
-          .cancel {
+          .clean {
             background-color: #c52424;
             margin-right: 350px;
           }
 
-          .cancel:hover {
+          .clean:hover {
             background-color: #852020;
           }
         }
+      }
+    }
+
+    &__error {
+      padding-top: 30px;
+      font-size: 16px;
+      color: #ff0000;
+      font-weight: 700;
+
+      .msg-error {
+        border: 1px solid #ff0000;
+        padding: 10px 25px;
       }
     }
 
