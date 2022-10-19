@@ -5,33 +5,33 @@
             <h1 class="title">Bem-Vindo a Reserva Mogly! Preencha os campos abaixo para se cadastrar.</h1>
         </section>
         <section class="container__form">
-            <form>
+            <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
                 <section class="form__info">
                     <section class="description">
                         <label>Nome Completo: <strong class="mandatory">*</strong></label>
-                        <input type="text" name="name" id="name" class="text__form">
+                        <input type="text" formControlName="name" name="name" id="name" class="text__form" required>
                     </section>
                     <section class="description">
                         <label>E-mail: <strong class="mandatory">*</strong></label>
-                        <input type="email" name="email" id="email" class="text__form">
+                        <input type="email" formControlName="email" name="email" id="email" class="text__form" required>
                     </section>
                     <section class="description">
                         <label>Data Nascimento: <strong class="mandatory">*</strong></label>
-                        <input type="date" name="date" id="date" class="text__form">
+                        <input type="date" formControlName="date" name="date" id="date" class="text__form" required>
                     </section>
                 </section>
                 <section class="form__info">
                     <section class="description">
                         <label>Celular: <strong class="mandatory">*</strong></label>
-                        <input type="text" name="cell" id="cell" class="text__form">
+                        <input type="text" formControlName="cell" name="cell" id="cell" class="text__form" required>
                     </section>
                     <section class="description">
                         <label>CPF: <strong class="mandatory">*</strong></label>
-                        <input type="number" name="cpf" id="cpf" class="text__form">
+                        <input type="number" formControlName="cpf" name="cpf" id="cpf" class="text__form" required>
                     </section>
                     <section class="description">
                         <label>RG: <strong class="mandatory">*</strong></label>
-                        <input type="number" name="rg" id="rg" class="text__form">
+                        <input type="number" formControlName="rg" name="rg" id="rg" class="text__form" required>
                     </section>
                     <section class="description">
                         <label>Observação:</label>
@@ -66,6 +66,8 @@
                 </tbody>
             </table>
         </section>
+
+        <span class="msg-error" *ngIf="msgError">{{ msgError }}</span>
     </section>
 </main>
 <app-footer></app-footer>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -6,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+
+  public msgError!: string;
+
+  public formAuth: FormGroup = this.formBuilder.group({
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email]],
+    date: ['', [Validators.required]],
+    cell: ['' , Validators.required],
+    cpf: ['' , Validators.required],
+    rg: ['' , Validators.required],
+  })
 
   public list: Array<{ name: string, email: string, birthDate: string }> = [
     {
@@ -16,9 +28,18 @@ export class RegistrationComponent implements OnInit {
   ];
 
   constructor(
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
+  }
+
+  public submitForm() {
+    if (this.formAuth.valid) {
+      this.msgError = 'Cadastrado';
+    } else {
+      this.msgError = 'Erro';
+    }
   }
 
 }
