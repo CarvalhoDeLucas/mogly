@@ -40,8 +40,7 @@ export class RegistrationComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public submitForm() {
     if (!this.formAuth.valid) {

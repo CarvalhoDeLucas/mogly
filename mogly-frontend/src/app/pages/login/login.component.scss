@@ -15,7 +15,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        background-color: rgba(217, 217, 217, 0.8);
+        background-color: rgba(217, 217, 217, 0.9);
 
         border: 1px solid #000;
         border-radius: 10px;
@@ -36,6 +36,7 @@
                 .title__login{
                     font-size: 30px;
                     font-weight: 700;
+                    padding-bottom: 25px;
                 }
 
                 label{
@@ -44,7 +45,7 @@
                 }
 
                 .input__form{
-                    height: 30px;
+                    height: 40px;
                     width: 240px;
                     padding: 0 10px;
                     border-radius: 5px;
@@ -54,13 +55,42 @@
                 .btn__login{
                     height: 45px;
                     width: 165px;
+                    margin-top: 15px;
+                    
                     border-radius: 5px;
-                    border: 1px solid #000;
-                    cursor:pointer;
+                    border: none;
+                    
+                    cursor: pointer;
+
+                    background-color: #1aa30d;
+                    color: #FFF;
+
+                    font-weight: 700;
+                    font-size: 17px;
                 }
 
                 .btn__login:hover{
                     background-color: #076b1d;
+                }
+
+                &__help {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    width: 262px;
+
+                    a {
+                        text-decoration: none;
+
+                        font-size: 12px;
+                        font-weight: 700;
+                        color: #000;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
                 }
                 
             }
