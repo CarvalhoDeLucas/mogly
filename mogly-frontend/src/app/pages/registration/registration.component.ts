@@ -48,4 +48,8 @@ export class RegistrationComponent implements OnInit {
     }
   }
 
+  public clear() {
+    this.msgError = '';
+  }
+
 }
