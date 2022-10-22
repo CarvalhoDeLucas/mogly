@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { catchError, Observable, map, throwError } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,8 @@ export class AuthService {
   ) { }
 
   public sing(payload: { email: string, password: string }): Observable<any> {
+    console.log('teste');
+    
     return this.http.post<{ token: string }>(`${this.url}/sing`, payload).pipe(
       map((res) => {
         localStorage.removeItem('access_token');

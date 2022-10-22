@@ -1,20 +1,20 @@
 <main>
     <section class="login">
-        <form>
+        <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
             <section class="form__info">
                 <label for="title__login"  class="title__login">LOGIN</label>
             </section>
             <section class="form__info">
-                <label for="user">Usuário <strong class="mandatory">*</strong></label>
-                <input type="text" class="input__form" name="user" placeholder="Usuário">
+                <label for="user">E-mail <strong class="mandatory">*</strong></label>
+                <input type="text" class="input__form" name="user" placeholder="Usuário" formControlName="email" required>
             </section>
             <section class="form__info">
                 <label for="password">Senha <strong class="mandatory">*</strong></label>
-                <input type="password" class="input__form" name="password" placeholder="Senha">
+                <input type="password" class="input__form" name="password" placeholder="Senha" formControlName="password" required>
             </section>
             <section class="form__info__help">
-                <a href="">Criar uma conta</a>
-                <a href="">Esqueceu a sua senha?</a>
+                <a [routerLink]="['registration']">Criar uma conta</a>
+                <a [routerLink]="['']">Esqueceu a sua senha?</a>
             </section>
             <section class="form__info">
                 <button class="btn__login">Login</button>
