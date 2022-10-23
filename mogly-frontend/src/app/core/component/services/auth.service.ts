@@ -16,9 +16,7 @@ export class AuthService {
   ) { }
 
   public sing(payload: { email: string, password: string }): Observable<any> {
-    console.log('teste');
-    
-    return this.http.post<{ token: string }>(`${this.url}/sing`, payload).pipe(
+    return this.http.post<{ token: string }>(`${this.url}/sign`, payload).pipe(
       map((res) => {
         localStorage.removeItem('access_token');
         localStorage.setItem('access_token', res.token);
@@ -36,7 +34,7 @@ export class AuthService {
 
   public logout() {
     localStorage.removeItem('access_token');
-    return this.router.navigate(['login']);
+    return this.router.navigate(['']);
   }
 
   public isAuthenticated(): boolean {

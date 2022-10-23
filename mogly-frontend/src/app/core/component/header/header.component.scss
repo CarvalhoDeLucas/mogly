@@ -12,26 +12,21 @@
       padding: 0 15px;
 
       display: flex;
-
       justify-content: space-between;
 
       .info {
         flex-direction: row;
-        // justify-content: space-between;
-
-        &__menu {
-          cursor: pointer;
-          font-size: 18px;
-          right: 0%;
-          position: absolute;
-          left: 1%;
-        }
+        justify-content: space-between;
 
         &__mogly {
           display: flex;
           justify-content: center;
-          
-          margin: 0 auto;
+          position: absolute;
+
+          left: 50%;
+          transform: translate(-50%, 0);
+          text-align: center;
+          justify-content: center;
 
           text-decoration: none;
           color: #FFF;

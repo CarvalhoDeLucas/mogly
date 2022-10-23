@@ -20,7 +20,7 @@ app.post("/sign", (req, res) => {
     };
 
     const token = jwt.sign({ data }, "SECRET", {
-      expiresIn: 100000,
+      expiresIn: 300000,
     });
 
     return res.json({ token });

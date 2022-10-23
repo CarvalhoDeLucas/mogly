@@ -35,11 +35,8 @@ export class LoginComponent implements OnInit {
         next: (res) => res,
         error: (err) => (this.msgError = err),
       });
-    }
-    console.log(this.msgError);
-    
-    if (this.msgError) {
-      alert(this.msgError);
+    } else {
+      alert('Preencha com um e-mail válido!')
     }
   }
 

@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
     {
       name: 'Lucas',
       email: 'lucas@gmail.com',
-      birthDate: '14/01/2001'
+      birthDate: '2001-01-14'
     }
   ];
 
@@ -40,11 +40,19 @@ export class RegistrationComponent implements OnInit {
     private formBuilder: FormBuilder
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   public submitForm() {
     if (!this.formAuth.valid) {
       this.msgError = 'Preencha todos os campos corretamente!';
+    } else {
+      const data: { name: string, email: string, birthDate: string } = {
+        name: this.formAuth.value.name,
+        email: this.formAuth.value.email,
+        birthDate: this.formAuth.value.date
+      }
+
+      this.list.push(data);
     }
   }
 
