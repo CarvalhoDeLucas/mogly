@@ -16,8 +16,6 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required]]
   });
 
-  public msgError!: string;
-
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService
@@ -33,10 +31,10 @@ export class LoginComponent implements OnInit {
         password: this.formAuth.value.password,
       }).subscribe({
         next: (res) => res,
-        error: (err) => (this.msgError = err),
+        error: (err) => (alert(err)),
       });
-    } else {
-      alert('Preencha com um e-mail válido!')
+    } else {  
+      alert('Usuário ou senha inválido!')
     }
   }
 

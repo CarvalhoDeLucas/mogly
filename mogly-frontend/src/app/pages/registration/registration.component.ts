@@ -56,14 +56,13 @@ export class RegistrationComponent implements OnInit {
         birthDate: this.formAuth.value.date
       }
 
-      console.log('teste');
-      
       this.list.push(data);
-      this.msgError = '';
+      this.clear();
     }
   }
 
   public clear() {
+    this.formAuth.reset();
     this.msgError = '';
   }
 
@@ -99,11 +98,22 @@ export class RegistrationComponent implements OnInit {
 
   private testCpf(): boolean {
     const cpf = require('node-cpf');
-    return cpf.validate(this.formAuth.value.cpf);
+
+    if (!cpf.validate(this.formAuth.value.cpf)) {
+      this.msgError = 'CPF Invalido!';
+      return false;
+    }
+
+    return true;
   }
 
   private testRg(): boolean {
-    return this.formAuth.value.rg === 7;
+    if (!Number(this.formAuth.value.rg)) {
+      this.msgError = 'RG Invalido!';
+      return false;
+    }
+
+    return true;
   }
 
 }
