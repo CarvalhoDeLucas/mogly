@@ -3,7 +3,7 @@
     <p class="info__menu">
       <app-menu></app-menu>
     </p>
-    <a [routerLink]="['home']" class="info__mogly">
+    <a class="info__mogly" (click)="home()">
       <h1>MOGLY</h1>
     </a>
     <input type="text" name="search" class="info__search" [(ngModel)]="search" (keyup.enter)="searchInfo()">

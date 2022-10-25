@@ -21,10 +21,14 @@ export class HeaderComponent implements OnInit {
     if ('cadastro'.includes(this.search.toLowerCase())) {
       this.router.navigate(['registration']);
     } else if ('home'.includes(this.search.toLowerCase()) || 'inicio'.includes(this.search.toLowerCase())) {
-      this.router.navigate(['home']);
+      this.home();
     } else {
       alert('Nenhuma página encontrada!')
     }
   }
+
+  public home() {
+    this.router.navigate(['home']);
+  } 
 
 }
