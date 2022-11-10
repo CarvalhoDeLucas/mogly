@@ -1,0 +1,3 @@
+Web Service REST com comunicação JSON contendo no mínimo 1 CRUD completo (insert, update, delete, select e, se possível um relacionamento entre duas tabelas). Os serviços devem retornar os códigos de erros conforme a tabela de códigos HTTP, caso um serviço seja invocado de forma incorreta. (30%)
+Acesso a banco de dados relacional através de um framework ORM (JPA, Entity Manager, Sequelize, etc) com nomenclatura padrão de BD (30%)
+Chamar os serviços de back-end desenvolvido em um cliente Rest HTML por meio de Javascript/JQuery/Ajax (40%)
