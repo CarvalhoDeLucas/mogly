@@ -46,12 +46,12 @@ public class PersonService {
     }
 
     private void updateData(Person entity, Person person) {
-        entity.setFullName(person.getFullName());
-        entity.setEmail(person.getEmail());
-        entity.setBirthDate(person.getBirthDate());
-        entity.setCell(person.getCell());
-        entity.setCpf(person.getCpf());
-        entity.setRg(person.getRg());
-        entity.setObservation(person.getObservation());
+        if (person.getFullName() != null) entity.setFullName(person.getFullName());
+        if (person.getEmail() != null) entity.setEmail(person.getEmail());
+        if (person.getBirthDate() != null) entity.setBirthDate(person.getBirthDate());
+        if (person.getCell() != null) entity.setCell(person.getCell());
+        if (person.getCpf() != 0) entity.setCpf(person.getCpf());
+        if (person.getRg() != 0) entity.setRg(person.getRg());
+        if (person.getObservation() != null) entity.setObservation(person.getObservation());
     }
 }

@@ -25,7 +25,7 @@ public class Person implements Serializable {
     private Long id;
     private String fullName;
     private String email;
-    private Date birthDate;
+    private String birthDate;
     private String cell;
     private int cpf;
     private int rg;
@@ -34,7 +34,7 @@ public class Person implements Serializable {
     public Person() {
     }
 
-    public Person(Long id, String fullName, String email, Date birthDate, String cell, int cpf, int rg, String observation) {
+    public Person(Long id, String fullName, String email, String birthDate, String cell, int cpf, int rg, String observation) {
         super();
         this.id = id;
         this.fullName = fullName;
@@ -70,11 +70,11 @@ public class Person implements Serializable {
         this.email = email;
     }
 
-    public Date getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date bithDate) {
+    public void setBirthDate(String bithDate) {
         this.birthDate = bithDate;
     }
 
