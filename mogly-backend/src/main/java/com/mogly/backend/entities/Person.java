@@ -1,7 +1,6 @@
 package com.mogly.backend.entities;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Objects;
 
 import javax.persistence.Entity;
